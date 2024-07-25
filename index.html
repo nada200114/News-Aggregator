@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="loading"><span class="loader"></span></section>
+
+    <nav class="navbar navbar-expand-lg bg-danger change">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">News</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active link-light" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" id="navLinks" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle link-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Country
+              </a>
+              <ul class="dropdown-menu countryList">
+                <li>
+                  <a class="dropdown-item" countryCode="ae" href="#"
+                    >United Arab Emirates</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="ar" href="#"
+                    >Argentina</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="at" href="#">Austria</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="br" href="#">Brazil</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="ca" href="#"> Canada</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="cn" href="#"> China</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="de" href="#">
+                    Germany</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="eg" href="#">Egypt</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="fr" href="#">France</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" countryCode="gr" href="#"> Greece</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <ul class="nav justify-content-center categoryLinks bg-black mb-3">
+      <li class="nav-item">
+        <a class="nav-link" category="business" href="#">Business</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" category="entertainment" href="#">Entertainment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" category="general" href="#">General</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" category="health" href="#">Health</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" category="science" href="#">Science</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" category="sports" href="#">Sports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" category="technology" href="#">Technology</a>
+      </li>
+    </ul>
+
+    <!-- <ul
+      class="nav nav-pills mb-3 justify-content-center py-5 bg-danger"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="pills-home-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-home"
+          type="button"
+          role="tab"
+          aria-controls="pills-home"
+          aria-selected="true"
+          category="business"
+        >
+          Business
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-profile-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-profile"
+          type="button"
+          role="tab"
+          aria-controls="pills-profile"
+          aria-selected="false"
+          category="entertainment"
+        >
+          Entertainment
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-contact-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-contact"
+          type="button"
+          role="tab"
+          aria-controls="pills-contact"
+          aria-selected="false"
+          category="general"
+        >
+          General
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-disabled-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-disabled"
+          type="button"
+          role="tab"
+          aria-controls="pills-disabled"
+          aria-selected="false"
+          category="health"
+        >
+          Health
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-disabled-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-disabled"
+          type="button"
+          role="tab"
+          aria-controls="pills-disabled"
+          aria-selected="false"
+          category="science"
+        >
+          Science
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-disabled-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-disabled"
+          type="button"
+          role="tab"
+          aria-controls="pills-disabled"
+          aria-selected="false"
+          category="sports"
+        >
+          Sports
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="pills-disabled-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-disabled"
+          type="button"
+          role="tab"
+          aria-controls="pills-disabled"
+          aria-selected="false"
+          category="technology"
+        >
+          Technology
+        </button>
+      </li>
+    </ul> -->
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+        tabindex="0"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+        tabindex="0"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+        tabindex="0"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="pills-disabled"
+        role="tabpanel"
+        aria-labelledby="pills-disabled-tab"
+        tabindex="0"
+      ></div>
+    </div>
+
+    <div class="container">
+      <div class="row" id="newsBody"></div>
+    </div>
+
+    <footer class="bg-black text-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>About Us</h3>
+            <p>Programmer Nada Ehab</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Contact Us</h3>
+            <address>
+              <strong>Address:</strong> 123 Main St, City, Country<br />
+              <strong>Email:</strong> info@example.com<br />
+              <strong>Phone:</strong> +1 (123) 456-7890
+            </address>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3">
+        &copy; 2023 Your Website. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
